@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de deseos Hector Cortes</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Fondo navideño */
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: url("https://static.vecteezy.com/system/resources/thumbnails/030/512/957/small_2x/ai-generated-christmas-background-spruce-branch-and-snowflakes-frame-space-for-text-photo.jpg")
+          no-repeat center center fixed;
+        background-size: cover;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .product-list {
+        width: 100%;
+        flex-grow: 1;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      /* Estilos de cada tarjeta de producto */
+      .product-card {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fafafa;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.2s;
+      }
+
+      .product-card:hover {
+        transform: scale(1.03);
+      }
+
+      .product-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 15px;
+      }
+
+      .product-info {
+        flex-grow: 1;
+      }
+
+      .product-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .product-price {
+        color: #007600;
+        font-weight: bold;
+      }
+
+      /* Estilos de la nieve */
+      .snowflake {
+        position: fixed;
+        top: -10px;
+        font-size: 1.2em;
+        color: #fff;
+        animation: fall linear infinite;
+        opacity: 0.8;
+        z-index: 0;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+
+      /* Botón de control de audio */
+      #audio-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 16px;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Estilos responsivos */
+
+      @media (max-width: 450px) {
+        .container {
+          max-width: 300px;
+          padding: 5px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 8px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          z-index: 1;
+        }
+
+        .product-card {
+          padding: 1px;
+          transform: scale(0.9);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 80%;
+        }
+        .product-list {
+          gap: 15px; /* Mayor espacio entre elementos */
+          justify-content: center; /* Centra las tarjetas */
+          margin: 10px;
+          padding: 10px;
+        }
+
+        .product-card {
+          max-width: 400px;
+          min-width: 300px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hector Cortes - Lista de Deseos</h1>
+      <ul class="product-list">
+        <!-- Producto 1 -->
+        <li>
+          <a
+            href="https://www.amazon.com.mx/dp/B0D8L6Q9Q7?ref=cm_sw_r_cso_wa_apan_dp_KP032MX95VFS14CM6A1V&ref_=cm_sw_r_cso_wa_apan_dp_KP032MX95VFS14CM6A1V&social_share=cm_sw_r_cso_wa_apan_dp_KP032MX95VFS14CM6A1V&starsLeft=1&skipTwisterOG=1"
+            class="product-card"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/81az8IXjFHL._AC_SX679_.jpg"
+              alt="Producto 1"
+              class="product-image"
+            />
+            <div class="product-info">
+              <div class="product-title">
+                Cuchillo Vikingo Martillado de Acero de Alto Carbono
+              </div>
+              <div class="product-price">$339.00 MXN</div>
+            </div>
+          </a>
+        </li>
+
+        <!-- Producto 2 -->
+        <li>
+          <a
+            href="https://www.amazon.com.mx/dp/B0BZS3PLFT?ref=cm_sw_r_cso_wa_apan_dp_MEFQT2HZ5XJ5J7BFAS3M&ref_=cm_sw_r_cso_wa_apan_dp_MEFQT2HZ5XJ5J7BFAS3M&social_share=cm_sw_r_cso_wa_apan_dp_MEFQT2HZ5XJ5J7BFAS3M&starsLeft=1&skipTwisterOG=1"
+            class="product-card"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/61h7G4SBe3L._AC_SX679_.jpg"
+              alt="Producto 2"
+              class="product-image"
+            />
+            <div class="product-info">
+              <div class="product-title">
+                Cuchillo Viking para carnicero de carne,Cuchillo Forjado A Mano
+                Con Vaina.
+              </div>
+              <div class="product-price">$498.00 MXN</div>
+            </div>
+          </a>
+        </li>
+
+        <!-- Producto 3 -->
+        <li>
+          <a
+            href="https://www.amazon.com.mx/dp/B0DFYJPHV9?ref=cm_sw_r_cso_wa_apan_dp_J67MA47T2FEV0C5SKJEK&ref_=cm_sw_r_cso_wa_apan_dp_J67MA47T2FEV0C5SKJEK&social_share=cm_sw_r_cso_wa_apan_dp_J67MA47T2FEV0C5SKJEK&starsLeft=1&skipTwisterOG=1"
+            class="product-card"
+            target="_blank"
+          >
+            <img
+              src="https://m.media-amazon.com/images/I/71vaBGiU67L._AC_SX679_.jpg"
+              alt="Producto 3"
+              class="product-image"
+            />
+            <div class="product-info">
+              <div class="product-title">
+                Cuchillo de carnicero de dragón para corte de huesos de carne.
+              </div>
+              <div class="product-price">$587.99 MXN</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- JavaScript para la animación de nieve -->
+    <script>
+      const snowContainer = document.body;
+
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.textContent = "❄";
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+
+        snowContainer.appendChild(snowflake);
+
+        setTimeout(() => {
+          snowflake.remove();
+        }, 5000);
+      }
+
+      setInterval(createSnowflake, 100);
+    </script>
+
+    <!-- Audio de fondo navideño -->
+    <audio id="background-audio" loop>
+      <source
+        src="./we-wish-you-a-merry-christmas-bells-background-xmas-music-for-video-256126.mp3"
+        type="audio/mpeg"
+      />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Botón de control de audio -->
+    <button id="audio-control">Pausa Música</button>
+
+    <!-- JavaScript para el control de audio -->
+    <script>
+      const audio = document.getElementById("background-audio");
+      const audioControlButton = document.getElementById("audio-control");
+
+      // Función para alternar play/pausa del audio
+      audioControlButton.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          audioControlButton.textContent = "Pausa Música";
+        } else {
+          audio.pause();
+          audioControlButton.textContent = "Reproduce Música";
+        }
+      });
+    </script>
+  </body>
+</html>
